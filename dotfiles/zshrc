@@ -91,3 +91,5 @@ alias df="df -h"
 JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export JAVA_HOME
 GRADLE_HOME=/usr/local/Cellar/gradle28/2.8/libexec
+# NodeJS
+export PATH=$HOME/.nodebrew/current/bin:$PATH
