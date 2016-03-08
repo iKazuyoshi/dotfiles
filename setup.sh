@@ -15,11 +15,11 @@ cd ~/.powerline-shell/;./install.sh
 
 # install nodebrew, rbenv & ruby-build, pyenv, plenv & perl-build
 curl -L git.io/nodebrew | perl - setup
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+# git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+# git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 git clone https://github.com/tokuhirom/plenv.git ~/.plenv
-git clone https://github.com/tokuhirom/Perl-Build.git ~/.plenv/plugins/perl-build
+# git clone https://github.com/tokuhirom/Perl-Build.git ~/.plenv/plugins/perl-build
 
 # symlinks
 if [ -f ~/.zshrc ]; then
@@ -35,3 +35,9 @@ ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 # ln -s ~/dotfiles/.editorconfig ~/.editorconfig
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+
+# set up oh-my-zsh
+~/dotfiles/oh-my-zsh/tools/install.sh | ZSH=~/dotfiles/oh-my-zsh sh
+
+# create hard-link to oh-my-zsh-powerline-theme from oh-my-zsh/themes
+ln -f ~/dotfiles/oh-my-zsh-powerline-theme/powerline.zsh-theme ~/dotfiles/oh-my-zsh/themes/powerline.zsh-theme
